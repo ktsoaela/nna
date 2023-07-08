@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">   
+
+        <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+
+    
+
+        <title>Khotso Portfolio</title>
+        <style>
+            .banner_section{
+                margin:50px 0px 0px;
+                padding:50px 0px 50px;
+                background-color: var(--first-color);
+            }
+
+            .portoflio_section{
+                padding-top: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">Khotso</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+          
+
+            <section class="banner_section">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h1 class="banner__title">Portfolio Detail</h1>
+                    </div>
+                  </div>
+                </div>
+            </section>    
+
+
+            <section class="portoflio_section bd-grid">
+          
+                <div class="site-section pb-0">
+                    <div class="container">
+                        <div class="row align-items-stretch">
+                            <div class="col-md-6 aos-init aos-animate" data-aos="fade-up">
+                                <img src="assets/img/placeholder.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <div class="col-md-3 ml-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                                <div class="sticky-content">
+                                <h2 class="section-title">Project Title</h2>
+                                <h4 class="about__text h4 mb-3">Breif</h4>
+
+                                <div class="mb-5">
+                                    <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores illo, id recusandae molestias
+                                    illum unde pariatur, enim tempora.</p>
+                                </div>
+                    
+                                <h4 class="about__text h4 mb-3">Technologies</h4>
+
+                                <div class="card-body skills__body p-0">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">Design</li>
+                                        <li class="list-group-item">HTML5/CSS3</li>
+                                        <li class="list-group-item">CMS</li>
+                                        <li class="list-group-item">Logo</li>
+                                    </ul>
+                                </div>
+
+                                <div class="my-5">
+                                    <p class="about__text"><a href="#" class="">View Source Code</a></p>
+                                    <p class="about__text"><a href="#" class="">View Project Demo</a></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="about section " id="about">
+            
+                    <ul class="nav nav-tabs bd-grid" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Project Challenges/Solutions:</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Project Role/Responsibilities</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Project Duration</button>
+                        </li>
+                        
+                        <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Project Results/Outcomes</button>
+                        </li>
+                      
+                    </ul>
+                    <div class="tab-content bd-grid" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                           
+                               
+                            
+                            <div class="col-md-12">
+                                <div class="challenge my-3">
+                                <h4 class="about__text h4 mb-3" id="challenge__title">Challenge 1: [Describe the challenge]</h4>
+                                <p class="about__text mb-3" id="challenge__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+                                <h4 class="about__text h4 mb-3" id="challenge__title">Solution: [Describe the solution implemented]</h4>
+                                <p class="about__text mb-3" id="challenge__solution">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore.</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            
+                            
+                            
+                            <div class="responsibility">
+                                <h4 class="responsibility__title">Role: [Your Role]</h4>
+                                <ul class="responsibility__tasks">
+                                  <li>[Task 1]</li>
+                                  <li>[Task 2]</li>
+                                  <li>[Task 3]</li>
+                                  <li>[Task 4]</li>
+                                </ul>
+                                
+                              </div>
+                            
+                            <div class="responsibility">
+                                <h4 class="responsibility__title">Skills Utilized:</h4>
+                                <ul class="responsibility__skills">
+                                  <li>[Skill 1]</li>
+                                  <li>[Skill 2]</li>
+                                  <li>[Skill 3]</li>
+                                  <li>[Skill 4]</li>
+                                </ul>
+                              </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">If the project is live or publicly accessible, provide a URL or a link to a demo version. This allows potential clients to interact with the project and experience its functionality.</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Highlight any measurable results or outcomes achieved through the project. This could include metrics such as increased website traffic, improved conversion rates, or positive user feedback.</div>
+                    </div>
+            
+            </section>
+            
+        </main>
+          
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p class="footer__title">Khotso</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </footer>
+      
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
