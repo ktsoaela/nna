@@ -1,0 +1,98 @@
+<main  *ngIf="project"  class="l-main">
+          
+
+    <section class="banner_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="banner__title">Portfolio Detail</h1>
+            </div>
+          </div>
+        </div>
+    </section>    
+
+<!-- 
+    <section class="portoflio_section section bd-grid">
+   -->
+   <section class="work section bd-grid" id="work">
+        <div class="site-section ">
+            <div class="container">
+                <div class="row align-items-stretch">
+                    <div class="col-md-6 aos-init aos-animate" data-aos="fade-up">
+                        <img src="{{ project.image }}" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 ml-auto aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div class="sticky-content">
+                            <h2 class="section-title">{{ project.name }}</h2>
+                            <h4 class="about__text h4 mb-3">Brief</h4>
+                            <div class="mb-5">
+                            <p class="about__text">{{ project.brief }}</p>
+                            </div>
+                            <h4 class="about__text h4 mb-3">Technologies</h4>
+                            <div class="card-body skills__body p-0">
+                            <!-- <ul class="list-group list-group-flush">
+                                <li class="list-group-item" >{{ project.technologies }}</li>
+                            </ul>
+                             -->
+
+
+                            <!-- <div class="card-body skills__body p-0">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Design</li>
+                                    <li class="list-group-item">HTML5/CSS3</li>
+                                    <li class="list-group-item">CMS</li>
+                                    <li class="list-group-item">Logo</li>
+                                </ul>
+                            </div> -->
+
+                            <div class="card-body skills__body p-0">
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item" *ngFor="let tech of project.technologies">{{ tech }}</li>
+                                </ul>
+                              </div>
+                              
+
+
+                            </div>
+                            <div class="my-5">
+                            <p class="about__text"><a href="{{ project.demo_link }}">View Source Code</a></p>
+                            <p class="about__text"><a href="{{ project.project_link }}">View Project Demo</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section " id="about">
+    
+            <ul class="nav nav-tabs bd-grid" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Project Challenges/Solutions:</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Project Role/Responsibilities</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Project Duration</button>
+                </li>
+                
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Project Results/Outcomes</button>
+                </li>
+              
+            </ul>
+            <div class="tab-content bd-grid" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> <div class="py-3">{{ project.challenges_solutions }}</div></div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"> <div class="py-3">{{ project.role_responsibilities }}</div></div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="py-3">{{ project.project_duration }}</div></div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"> <div class="py-3">{{ project.project_outcomes }}</div></div>
+            </div>
+    
+    </section>
+    
+    
+</main>
+  
+

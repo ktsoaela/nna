@@ -1,0 +1,27 @@
+<main class="l-main">
+          
+
+    <section class="banner_section" id="heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="banner__title">Portfolio</h1>
+            </div>
+          </div>
+        </div>
+    </section>   
+    
+    
+   <!-- Work Section -->
+   <section class="work section" id="work">
+    <h2 class="section-title">Portfolio</h2>
+
+    <div class="work__container bd-grid">
+        <a *ngFor="let item of workItems" [routerLink]="['/detail', item.projectId]" class="work__img">
+            <img [src]="item.image" alt="">
+        </a>
+    </div>
+    </section>
+
+</main>
+

@@ -1,0 +1,185 @@
+<main class="l-main">
+
+    <section class="home bd-grid" id="home">
+        <div class="home__data">
+        <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Khotso</span><br>a Developer</h1>
+        <a href="#contact" class="button">Contact</a>
+        </div>
+
+        <div class="home__social">
+        <a *ngFor="let link of homeSocialLinks" [href]="link.link" class="home__social-icon">
+            <i [class]="link.icon"></i>
+        </a>
+        </div>
+
+        <div class="home__img">
+        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <mask id="mask0" mask-type="alpha">
+            <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+            </mask>
+            <g mask="url(#mask0)">
+            <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+            <image class="home__blob-img" x="50" y="-10" href="assets/img/profile.png" />
+            </g>
+        </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section " id="about">
+        <h2 class="section-title">About</h2>
+
+        <div class="about__container bd-grid">
+        <div class="about__img">
+            <img src="assets/img/profile-pic.jpg" alt="">
+        </div>
+
+        <div>
+            <h2 class="about__subtitle">I am Khotso</h2>
+            <p class="about__text"> A self-taught web developer. Developing websites and applications
+            for my community as a freelance
+            developer for more than five years. Looking to work
+            with like-minded developers, tackling bigger projects
+            and learning new concepts and techniques on
+            programming, in order to grow my software skills and
+            my passion for technology.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="bd-grid">
+        <div class="skills__data-column">
+            <h2 class="skills__subtitle">Professional Skills</h2>
+            <p class="skills__text">I have acquired a strong foundation in various technologies and frameworks, enabling me to deliver professional solutions that meet clients' needs. With a passion for continuous learning and a commitment to excellence, I strive to stay updated with the latest industry trends and deliver exceptional results.</p>
+
+            <div class="skills__row">
+
+            <div *ngFor="let skill of frontEndSkills" class="card border-light">
+                <div class="card-header skills__data">
+                <div class="skills__names">
+                    <i class='bx bx-paint-roll skills__icon'></i>
+                    <span class="skills__name">{{ skill.name }}</span>
+                </div>
+                <div class="skills__bar" [ngClass]="skill.barClass"></div>
+                <div>
+                    <span class="skills__percentage">{{ skill.percentage }}</span>
+                </div>
+                </div>
+                <div class="card-body skills__body p-0">
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let item of skill.items" class="list-group-item">{{ item }}</li>
+                </ul>
+                </div>
+            </div>
+
+            <div *ngFor="let skill of backEndSkills" class="card border-light">
+                <div class="card-header skills__data">
+                <div class="skills__names">
+                    <i class='bx bx-server skills__icon'></i>
+                    <span class="skills__name">{{ skill.name }}</span>
+                </div>
+                <div class="skills__bar" [ngClass]="skill.barClass"></div>
+                <div>
+                    <span class="skills__percentage">{{ skill.percentage }}</span>
+                </div>
+                </div>
+                <div class="card-body skills__body p-0">
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let item of skill.items" class="list-group-item">{{ item }}</li>
+                </ul>
+                </div>
+            </div>
+
+            <div *ngFor="let tool of tools" class="card border-light">
+                <div class="card-header skills__data">
+                <div class="skills__names">
+                    <i class='bx bx-fork skills__icon'></i>
+                    <span class="skills__name">{{ tool.name }}</span>
+                </div>
+                <div class="skills__bar" [ngClass]="tool.barClass"></div>
+                <div>
+                    <span class="skills__percentage">{{ tool.percentage }}</span>
+                </div>
+                </div>
+                <div class="card-body skills__body p-0">
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let item of tool.items" class="list-group-item">{{ item }}</li>
+                </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+<!-- Work Section -->
+<section class="work section" id="work">
+    <h2 class="section-title">Portfolio</h2>
+  
+    <div class="work__container bd-grid">
+      <a *ngFor="let item of workItems.slice(0, 6)" [routerLink]="['/detail', item.projectId]" class="work__img">
+        <img [src]="item.image" alt="">
+      </a>
+    </div>
+    
+    <div class="work__container text-center">
+      <a [routerLink]="['/projects']" class="button">View all</a>
+    </div>
+  </section>
+  
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+        <form class="contact__form">
+            <input type="text" placeholder="Name" class="contact__input" [(ngModel)]="name" name="name">
+            <input type="email" placeholder="Email" class="contact__input" [(ngModel)]="email" name="email">
+            <textarea placeholder="Message" class="contact__input" [(ngModel)]="message" name="message"></textarea>
+            <button (click)="submitForm()" class="contact__button button">Enquire</button>
+        </form>
+        </div>
+    </section>  
+
+    <!-- Modal -->
+    <div class="modal fade" #explanationModal tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Hey {{name}}!</h5>
+            <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="contact__explanation-column">
+                <p>
+                Please note that the contact form on this portfolio website is limited in functionality when hosted on GitHub Pages.
+                <br>Due to security restrictions, it is not possible to directly send emails from the client-side (Angular) code on GitHub Pages.
+                </p>
+                <p>
+                If you would like to contact me directly, please click on the LinkedIn button below. It will redirect you to my LinkedIn profile where you can send me a message.
+                </p>
+                <p>
+                Message: {{message}}
+                </p>
+                <p>
+                <a href="https://www.linkedin.com/in/khotso-tsoaela" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+
+</main>
