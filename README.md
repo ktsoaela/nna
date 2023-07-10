@@ -27,13 +27,13 @@ To run the portfolio project locally, follow these steps:
 
 2. **Build the Docker image**: Navigate to the project directory and build the Docker image using the following command:
 
-docker build -t portfolio .
+`docker build -t portfolio .`
 
 This command builds the Docker image with the tag "portfolio" based on the Dockerfile.
 
 3. **Run the Docker container**: After the Docker image is built, run a container based on the image with the following command:
 
-docker run -p 8080:80 portfolio
+`docker run -p 8080:80 portfolio`
 
 This command maps port 8080 on your local machine to port 80 inside the Docker container, allowing you to access the portfolio project in your browser at `http://localhost:8080`.
 
